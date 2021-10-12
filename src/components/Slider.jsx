@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
-import Woman from "../assets/woman.jpg";
 import { sliderItems } from "../data";
 
 const Container = styled.div`
