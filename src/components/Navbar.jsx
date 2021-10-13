@@ -2,9 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 60px;
+
+  ${mobile({ height: "50px" })}
 `;
 
 const Wrapper = styled.div`
@@ -12,6 +15,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${mobile({ padding: "10px 0" })}
 `;
 
 const Left = styled.div`
@@ -24,6 +29,8 @@ const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
   text-transform: uppercase;
+
+  ${mobile({ display: "none" })}
 `;
 
 const SearchContainer = styled.div`
@@ -32,6 +39,8 @@ const SearchContainer = styled.div`
   align-items: center;
   margin-left: 25px;
   padding: 5px;
+
+  ${mobile({ display: "none" })}
 `;
 
 const Input = styled.input`
@@ -46,6 +55,8 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
+
+  ${mobile({ fontSize: "24px" })}
 `;
 
 const Right = styled.div`
@@ -60,6 +71,8 @@ const MenuItem = styled.div`
   cursor: pointer;
   margin-left: 25px;
   text-transform: uppercase;
+
+  ${mobile({ display: "none" })}
 `;
 
 const Navbar = () => {
@@ -69,7 +82,7 @@ const Navbar = () => {
         <Left>
           <Language>en</Language>
           <SearchContainer>
-            <Input />
+            <Input placeholder="Search" />
             <Search
               style={{
                 color: "gray",

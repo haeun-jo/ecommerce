@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -22,11 +23,15 @@ const Wrapper = styled.div`
   width: 40%;
   background-color: white;
   padding: 20px 10px 20px 20px;
+
+  ${mobile({ width: "75%" })}
 `;
 const Title = styled.h1`
   font-size: 24px;
   font-weight: 300;
   text-transform: uppercase;
+
+  ${mobile({ textAlign: "center" })}
 `;
 
 const Form = styled.form`
@@ -56,6 +61,8 @@ const Button = styled.button`
   color: white;
   outline: none;
   border: none;
+
+  ${mobile({ width: "75%", margin: "0 auto" })}
 `;
 
 const Register = () => {
